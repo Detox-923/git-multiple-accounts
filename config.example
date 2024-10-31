@@ -1,0 +1,19 @@
+#Archivo de configuración ssh para git
+
+# Configuración para la cuenta 1
+Host user1-github.com
+  User          User1
+  HostName      github.com
+  IdentityFile  ~/.ssh/id_rsa_user1
+
+# Configuración para la cuenta 2
+Host user2-github.com
+  User          User2
+  HostName      github.com
+  IdentityFile  ~/.ssh/id_rsa_user2
+
+# Configuraciones globales
+Host *
+  AddKeysToAgent            yes       # Añadir claves al agente SSH (si tienes passphrase)
+  IdentitiesOnly            yes       # Asegura usar solo las claves especificadas
+  PreferredAuthentications  publickey # Solo autenticación con claves públicas

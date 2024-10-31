@@ -1,0 +1,12 @@
+
+[include]
+    path = ~/.gitconfig.user1
+
+[includeIf "gitdir:Disk:/ruta/User1/"]
+	path = ~/.gitconfig.user1
+
+[includeIf "gitdir:Disk:/ruta/User2/"]
+	path = ~/.gitconfig.user2
+
+[init]
+	defaultBranch = main
